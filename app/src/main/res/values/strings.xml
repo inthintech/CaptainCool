@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Captain Cool</string>
+    <string name="com_facebook_loginview_log_out_button">Please Wait..</string>
+    <string name="facebook_app_id">132324913778608</string>
+    <string name="facebook_login_failed">No response from facebook server!</string>
+</resources>
