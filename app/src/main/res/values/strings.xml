@@ -3,4 +3,14 @@
     <string name="com_facebook_loginview_log_out_button">Please Wait..</string>
     <string name="facebook_app_id">132324913778608</string>
     <string name="facebook_login_failed">No response from facebook server!</string>
+    <string name="server_response_error">No response from app server!</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="play_game">NEW GAME</string>
+    <string name="vs_player">VS Player</string>
+    <string name="vs_cpu">VS CPU</string>
+    <string name="continue_progress">Continue</string>
+
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
