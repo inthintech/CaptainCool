@@ -1,14 +1,20 @@
 package com.keyrelations.captaincool;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
 
 import org.w3c.dom.Text;
 
+import java.util.Random;
+
 public class MatchStartActivity extends AppCompatActivity {
+
+    String toss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +22,7 @@ public class MatchStartActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_match_start);
         TextView tv = (TextView) findViewById(R.id.tossStatus);
-        String toss = "";
+
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -39,5 +45,14 @@ public class MatchStartActivity extends AppCompatActivity {
             }
 
         }
+    }
+
+
+    public void navigateToSelectOutcomeActivity(View view){
+        Intent intent = new Intent(getBaseContext(), SelectOutcomeActivity.class);
+        intent.putExtra("matchToss", toss);
+        startActivity(intent);
+        finish();
+        //Log.d("DEBUGLOG",String.valueOf(i1));
     }
 }

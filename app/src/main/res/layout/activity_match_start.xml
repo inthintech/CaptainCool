@@ -33,7 +33,7 @@
         android:text="@string/continue_progress"
         android:id="@+id/buttonContinue"
         android:textSize="@dimen/new_game_btn_text_size"
-        android:onClick="navigateToMatchStartActivity"
+        android:onClick="navigateToSelectOutcomeActivity"
         />
 
 

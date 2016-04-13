@@ -33,7 +33,8 @@
         </activity>
         <activity android:name=".HomeActivity" />
         <activity android:name=".SelectOpponentActivity" />
-        <activity android:name=".MatchStartActivity"></activity>
+        <activity android:name=".MatchStartActivity" />
+        <activity android:name=".SelectOutcomeActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>
