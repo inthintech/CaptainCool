@@ -10,6 +10,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -19,17 +23,21 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        // default method for handling onClick Events..
 
-        Button btn = (Button) findViewById(v.getId());
-        btn.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.outcome_btn_bg_didabled_color));
+        if(count<=60) {
+
+            // default method for handling onClick Events..
+
+            Button btn = (Button) findViewById(v.getId());
+            btn.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.outcome_btn_bg_didabled_color));
 
 
-        Integer btnNo;
-        String str = String.valueOf(v.getId());
-        Log.d("DEBUGLOG",str);
+            Integer btnNo;
+            String str = v.getResources().getResourceName(v.getId());
+            //Log.d("DEBUGLOG",String.valueOf(str.length()));
 
-        if(str.length()==11){
+        /*
+        if(str.length()==44){
 
             //btnNo = Integer.valueOf(str.substring(10,10));
             Log.d("DEBUGLOG",str.substring(10));
@@ -40,8 +48,57 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
             Log.d("DEBUGLOG",str.substring(10));
         }
         //Log.d("DEBUGLOG",String.valueOf(btn));
+        */
 
-        btn.setEnabled(false);
+            btnNo = Integer.valueOf(str.substring(42));
+            Log.d("DEBUGLOG", String.valueOf(btnNo));
+
+            switch (outcomes[btnNo - 1]) {
+                case "0":
+                    dot++;
+                    break;
+                case "1":
+                    one++;
+                    break;
+                case "2":
+                    two++;
+                    break;
+                case "3":
+                    three++;
+                    break;
+                case "4":
+                    four++;
+                    break;
+                case "6":
+                    six++;
+                    break;
+                case "NB":
+                    nb++;
+                    break;
+                case "WK":
+                    wk++;
+                    break;
+
+            }
+
+            btn.setEnabled(false);
+            count++;
+            updateOutcomeCount();
+        }
+        else{
+            Toast.makeText(getBaseContext(), getResources().getString(R.string.end_of_outcomes), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void updateOutcomeCount(){
+        outcome1Cnt.setText("x"+String.valueOf(dot));
+        outcome2Cnt.setText("x"+String.valueOf(one));
+        outcome3Cnt.setText("x"+String.valueOf(two));
+        outcome4Cnt.setText("x"+String.valueOf(three));
+        outcome5Cnt.setText("x"+String.valueOf(four));
+        outcome6Cnt.setText("x"+String.valueOf(six));
+        outcome7Cnt.setText("x"+String.valueOf(nb));
+        outcome8Cnt.setText("x"+String.valueOf(wk));
     }
 
     String[] outcomes = {
@@ -127,6 +184,26 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
             "WK"
     };
 
+    Integer dot = 0;
+    Integer one = 0;
+    Integer two = 0;
+    Integer three = 0;
+    Integer four = 0;
+    Integer six = 0;
+    Integer nb = 0;
+    Integer wk = 0;
+
+    TextView outcome1Cnt;
+    TextView outcome2Cnt;
+    TextView outcome3Cnt;
+    TextView outcome4Cnt;
+    TextView outcome5Cnt;
+    TextView outcome6Cnt;
+    TextView outcome7Cnt;
+    TextView outcome8Cnt;
+
+    Integer count=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -142,6 +219,15 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
         }*/
         Log.d("DEBUGLOG",String.valueOf(outcomes.length));
         Typeface font = Typeface.createFromAsset(this.getAssets(), "fontawesome-webfont.ttf");
+
+        outcome1Cnt = (TextView) findViewById(R.id.textViewOutcome1countIndicator);
+        outcome2Cnt = (TextView) findViewById(R.id.textViewOutcome2countIndicator);
+        outcome3Cnt = (TextView) findViewById(R.id.textViewOutcome3countIndicator);
+        outcome4Cnt = (TextView) findViewById(R.id.textViewOutcome4countIndicator);
+        outcome5Cnt = (TextView) findViewById(R.id.textViewOutcome5countIndicator);
+        outcome6Cnt = (TextView) findViewById(R.id.textViewOutcome6countIndicator);
+        outcome7Cnt = (TextView) findViewById(R.id.textViewOutcome7countIndicator);
+        outcome8Cnt = (TextView) findViewById(R.id.textViewOutcome8countIndicator);
 
         Button btnOutcome1 = (Button) findViewById(R.id.btnOutcome1);
         btnOutcome1.setTypeface(font);

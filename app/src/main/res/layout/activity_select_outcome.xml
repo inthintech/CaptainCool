@@ -18,13 +18,14 @@
         android:textColor="@color/label_text_color"
         android:textSize="@dimen/label_text_size" />
 
+
+
     <TextView
         android:id="@+id/textViewOutcome1"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewlabel"
-        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corner_outcome"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="0"
         android:textColor="@color/label_text_color"
@@ -40,18 +41,16 @@
         android:layout_toRightOf="@+id/textViewOutcome1"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textViewOutcome2"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewOutcome1"
-        android:layout_below="@+id/textViewlabel"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/textViewOutcome1"
         android:layout_toRightOf="@+id/textViewOutcome1"
         android:background="@drawable/rounded_corner_outcome"
@@ -70,18 +69,16 @@
         android:layout_toRightOf="@+id/textViewOutcome2"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textViewOutcome3"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewOutcome1"
-        android:layout_below="@+id/textViewlabel"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/textViewOutcome2"
         android:layout_toRightOf="@+id/textViewOutcome2"
         android:background="@drawable/rounded_corner_outcome"
@@ -100,18 +97,16 @@
         android:layout_toRightOf="@+id/textViewOutcome3"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textViewOutcome4"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewOutcome1"
-        android:layout_below="@+id/textViewlabel"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/textViewOutcome3"
         android:layout_toRightOf="@+id/textViewOutcome3"
         android:background="@drawable/rounded_corner_outcome"
@@ -130,14 +125,14 @@
         android:layout_toRightOf="@+id/textViewOutcome4"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
 
     <TextView
         android:id="@+id/textViewOutcome5"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewOutcome1"
         android:layout_marginTop="40dp"
@@ -157,16 +152,15 @@
         android:layout_toRightOf="@+id/textViewOutcome5"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textViewOutcome6"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewOutcome5"
-        android:layout_below="@+id/textViewlabel"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/textViewOutcome5"
@@ -187,17 +181,16 @@
         android:layout_toRightOf="@+id/textViewOutcome6"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
 
     <TextView
         android:id="@+id/textViewOutcome7"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewOutcome5"
-        android:layout_below="@+id/textViewlabel"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/textViewOutcome6"
@@ -218,17 +211,16 @@
         android:layout_toRightOf="@+id/textViewOutcome7"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
 
 
     <TextView
         android:id="@+id/textViewOutcome8"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/outcome_tv_width"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textViewOutcome5"
-        android:layout_below="@+id/textViewlabel"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="10dp"
         android:layout_toEndOf="@+id/textViewOutcome7"
@@ -249,9 +241,10 @@
         android:layout_toRightOf="@+id/textViewOutcome8"
         android:background="@drawable/rounded_corner_indicator"
         android:gravity="center"
-        android:text="x44"
+        android:text="x0"
         android:textColor="#8B1A1A"
         android:textSize="14sp" />
+
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/scrollViewOutcomes"

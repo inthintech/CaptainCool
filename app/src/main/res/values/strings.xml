@@ -14,4 +14,5 @@
     <string name="continue_progress">Continue</string>
 
     <string name="title_activity_login">LoginActivity</string>
+    <string name="end_of_outcomes">You selected 60 outcomes</string>
 </resources>
