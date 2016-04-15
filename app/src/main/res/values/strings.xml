@@ -10,6 +10,7 @@
     <string name="play_game">NEW GAME</string>
     <string name="vs_player">VS Player</string>
     <string name="vs_cpu">VS CPU</string>
+    <string name="icon_outcome">&#xf059;</string>
     <string name="continue_progress">Continue</string>
 
     <string name="title_activity_login">LoginActivity</string>

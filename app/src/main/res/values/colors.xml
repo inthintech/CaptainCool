@@ -8,5 +8,7 @@
     <color name="black_overlay">#66000000</color>
     <color name="label_text_color">#000</color>
     <color name="label_bg_color">#DEB887</color>
+    <color name="outcome_btn_bg_color">#DEB887</color>
+    <color name="outcome_btn_bg_didabled_color">#000</color>
     <color name="common_border_color">#DEB887</color>
 </resources>
