@@ -1160,7 +1160,7 @@
         android:layout_below="@+id/scrollViewOutcomes"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:onClick="navigateToSelectOutcomeActivity"
+        android:onClick="navigateToMatchInProgressActivity"
         android:text="@string/continue_progress"
         android:textSize="@dimen/new_game_btn_text_size" />
 

@@ -21,10 +21,155 @@ import java.util.Random;
 
 public class SelectOutcomeActivity extends Activity implements View.OnClickListener {
 
+
+
+    public void navigateToMatchInProgressActivity(View v){
+
+        if(count>59) {
+            Log.d("DEBUGLOG", "Dot_OPP " + dot_opp);
+            Log.d("DEBUGLOG", "one_OPP " + one_opp);
+            Log.d("DEBUGLOG", "two_OPP " + two_opp);
+            Log.d("DEBUGLOG", "three_OPP " + three_opp);
+            Log.d("DEBUGLOG", "four_OPP " + four_opp);
+            Log.d("DEBUGLOG", "six_OPP " + six_opp);
+            Log.d("DEBUGLOG", "nb_OPP " + nb_opp);
+            Log.d("DEBUGLOG", "wk_OPP " + wk_opp);
+
+            Log.d("DEBUGLOG", "Dot_PLA " + dot);
+            Log.d("DEBUGLOG", "one_PLA " + one);
+            Log.d("DEBUGLOG", "two_PLA " + two);
+            Log.d("DEBUGLOG", "three_PLA " + three);
+            Log.d("DEBUGLOG", "four_PLA " + four);
+            Log.d("DEBUGLOG", "six_PLA " + six);
+            Log.d("DEBUGLOG", "nb_PLA " + nb);
+            Log.d("DEBUGLOG", "wk_PLA " + wk);
+        }
+    }
+
+    public void setOpponentOutcome(){
+
+        Integer oppOptions[] = {
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71,
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79
+        };
+
+        Collections.shuffle(Arrays.asList(oppOptions));
+
+        for(int j=0;j<60;j++) {
+            switch (outcomes[oppOptions[j]]) {
+                case "0":
+                    dot_opp++;
+                    break;
+                case "1":
+                    one_opp++;
+                    break;
+                case "2":
+                    two_opp++;
+                    break;
+                case "3":
+                    three_opp++;
+                    break;
+                case "4":
+                    four_opp++;
+                    break;
+                case "6":
+                    six_opp++;
+                    break;
+                case "NB":
+                    nb_opp++;
+                    break;
+                case "WK":
+                    wk_opp++;
+                    break;
+
+            }
+        }
+
+
+    }
+
     @Override
     public void onClick(View v) {
 
-        if(count<=60) {
+        if(count<60) {
 
             // default method for handling onClick Events..
 
@@ -193,6 +338,15 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
     Integer nb = 0;
     Integer wk = 0;
 
+    Integer dot_opp = 0;
+    Integer one_opp = 0;
+    Integer two_opp = 0;
+    Integer three_opp = 0;
+    Integer four_opp = 0;
+    Integer six_opp = 0;
+    Integer nb_opp = 0;
+    Integer wk_opp = 0;
+
     TextView outcome1Cnt;
     TextView outcome2Cnt;
     TextView outcome3Cnt;
@@ -213,6 +367,7 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
             Log.d("DEBUGLOG",outcomes[i]);
         }*/
         Collections.shuffle(Arrays.asList(outcomes));
+        setOpponentOutcome();
         /*
         for(int i=0;i<outcomes.length;i++){
             Log.d("DEBUGLOG",outcomes[i]);
