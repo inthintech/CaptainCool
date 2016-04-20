@@ -34,7 +34,10 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".SelectOpponentActivity" />
         <activity android:name=".MatchStartActivity" />
-        <activity android:name=".SelectOutcomeActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity
+            android:name=".SelectOutcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".MatchInProgressActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 
 </manifest>

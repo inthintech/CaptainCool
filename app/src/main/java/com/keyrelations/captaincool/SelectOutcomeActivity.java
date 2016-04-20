@@ -2,6 +2,7 @@ package com.keyrelations.captaincool;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Debug;
 import android.support.v4.content.ContextCompat;
@@ -44,6 +45,9 @@ public class SelectOutcomeActivity extends Activity implements View.OnClickListe
             Log.d("DEBUGLOG", "nb_PLA " + nb);
             Log.d("DEBUGLOG", "wk_PLA " + wk);
         }
+        Intent intent = new Intent(getBaseContext(), MatchInProgressActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     public void setOpponentOutcome(){
